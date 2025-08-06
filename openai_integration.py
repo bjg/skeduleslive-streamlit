@@ -12,7 +12,6 @@ import tempfile
 from dotenv import load_dotenv
 import streamlit as st
 from openai import OpenAI
-from skeduleslive_client import SkedulesLiveClient
 try:
     # Try the standard import first
     from skeduleslive_client import SkedulesLiveClient
