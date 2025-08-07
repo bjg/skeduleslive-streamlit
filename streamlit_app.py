@@ -110,7 +110,7 @@ use_demo = st.sidebar.checkbox(
 
 if use_demo != st.session_state.use_demo_mode:
     st.session_state.use_demo_mode = use_demo
-    st.experimental_rerun()
+    st.rerun()
 
 # Display current mode
 mode_text = "**DEMO MODE**" if st.session_state.use_demo_mode else "**LIVE MODE**"
@@ -144,7 +144,7 @@ with st.sidebar:
                 if auth_result.get("status") == "success":
                     st.success("Authentication successful!")
                     # Refresh the page to reflect the authenticated state
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     st.error(auth_result.get("message", "Authentication failed"))
     else:
@@ -153,7 +153,7 @@ with st.sidebar:
             st.session_state.authenticated = False
             if 'auth_tokens' in st.session_state:
                 del st.session_state.auth_tokens
-            st.experimental_rerun()
+            st.rerun()
 
 # Configuration information
 with st.sidebar:
