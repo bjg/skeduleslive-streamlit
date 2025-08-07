@@ -100,7 +100,7 @@ st.subheader("Manage your schedules and events with natural language")
 # Mode selection toggle
 st.sidebar.subheader("App Mode")
 if 'use_demo_mode' not in st.session_state:
-    st.session_state.use_demo_mode = True
+    st.session_state.use_demo_mode = False
     
 use_demo = st.sidebar.checkbox(
     "Use Demo Mode", 
